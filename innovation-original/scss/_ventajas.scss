@@ -1,0 +1,46 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Las 4 tarjetas con ícono (CSS GRID)
+.ventajas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  // celular: 2 columnas iguales
+  gap: 1.5rem;
+  margin-top: -5rem;                      // sube para montarse sobre el header
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr); // computadora: 4 columnas
+    gap: 3.5rem;
+  }
+}
+
+.ventaja {
+  text-align: center;
+
+  &__caja {
+    background: $blanco;
+    border-radius: 10px;
+    height: 10.5rem;
+    // FLEXBOX para centrar el ícono en la caja
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icono {
+    width: 78px;
+  }
+
+  &__texto {
+    font-family: $fuente-etiquetas;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  // Modificadores: cada tarjeta con su sombra de color
+  &--azul &__caja    { @include sombra($sombra-azul); }
+  &--verde &__caja   { @include sombra($sombra-verde); }
+  &--rosa &__caja    { @include sombra($sombra-rosa); }
+  &--naranja &__caja { @include sombra($sombra-naranja); }
+}

@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+// Un MIXIN es un bloque de código reutilizable que acepta datos.
+// Este pone una sombra del color que le pasemos.
+@mixin sombra($color) {
+  box-shadow: 0 15px 60px rgba($color, 0.35);
+}
+
+@mixin slideshow($tiempo) {
+  width: 100%;
+  max-width: 410px;
+  overflow: hidden;                      // la VENTANA: esconde lo de afuera
+
+  &__pista {                             // = .slider__pista (la TIRA)
+    display: flex;                       // las 2 fotos en fila
+    width: 200%;                         // 2 fotos = 2 ventanas
+    animation: deslizar $tiempo infinite;// se mueve sola, siempre
+  }
+
+  &__img {                               // = .slider__img (cada foto)
+    width: 50%;                          // la mitad de la tira = 1 ventana
+  }
+}

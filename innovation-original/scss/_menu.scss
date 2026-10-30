@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+// Menú de navegación (se usa en el header y en el footer)
+.menu {
+  list-style: none;              // sin puntitos
+
+  // FLEXBOX: los enlaces en fila
+  display: flex;
+  flex-wrap: wrap;               // si no caben, bajan a otra línea
+  justify-content: center;
+  gap: 0.5rem 1.5rem;            // 0.5rem entre filas, 1.5rem entre columnas
+
+  &__link {
+    font-family: $fuente-etiquetas;
+    font-size: 1.125rem;
+    color: $blanco;
+    text-decoration: none;
+
+    &:hover,
+    &--activo {
+      color: $azul;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    gap: 2.8rem;
+  }
+}

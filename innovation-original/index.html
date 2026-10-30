@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovation Emotion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Open+Sans&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+
+  <!-- ===== 1. HEADER: barra (logo + menú) y portada ===== -->
+  <header class="header">
+    <div class="contenedor header__barra">
+      <img class="header__logo" src="images/logo.png" alt="Innovation">
+      <nav>
+        <ul class="menu">
+          <li><a class="menu__link menu__link--activo" href="#">Home</a></li>
+          <li><a class="menu__link" href="#">About Us</a></li>
+          <li><a class="menu__link" href="#">Service</a></li>
+          <li><a class="menu__link" href="#">Products</a></li>
+          <li><a class="menu__link" href="#">People</a></li>
+          <li><a class="menu__link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="contenedor header__portada">
+      <h1 class="header__titulo">Innovation <br>that drives <br>emotion</h1>
+      <p class="header__subtitulo">The next level</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== 2. VENTAJAS: 4 tarjetas con ícono (CSS GRID) ===== -->
+    <section class="contenedor ventajas">
+      <article class="ventaja ventaja--azul">
+        <div class="ventaja__caja">
+          <img class="ventaja__icono" src="images/icono-1.png" alt="">
+        </div>
+        <h3 class="ventaja__texto">Countless Layout</h3>
+      </article>
+      <article class="ventaja ventaja--verde">
+        <div class="ventaja__caja">
+          <img class="ventaja__icono" src="images/icono-2.png" alt="">
+        </div>
+        <h3 class="ventaja__texto">Easy to customize</h3>
+      </article>
+      <article class="ventaja ventaja--rosa">
+        <div class="ventaja__caja">
+          <img class="ventaja__icono" src="images/icono-3.png" alt="">
+        </div>
+        <h3 class="ventaja__texto">Live customizer</h3>
+      </article>
+      <article class="ventaja ventaja--naranja">
+        <div class="ventaja__caja">
+          <img class="ventaja__icono" src="images/icono-4.png" alt="">
+        </div>
+        <h3 class="ventaja__texto">Fully responsive</h3>
+      </article>
+    </section>
+
+    <!-- ===== 3. ABOUT US: imagen + texto (FLEXBOX) ===== -->
+    <section class="contenedor info">
+
+       <div class="titulo titulo--centrado">
+          <h2 class="titulo__texto">About us</h2>
+          <p class="titulo__sub">Technology</p>
+        </div>
+      
+        <div class="info__imagen slider">
+        <div class="slider__pista">
+          <img class="slider__img" src="images/about.png" alt="Persona con lentes VR">
+          <img class="slider__img" src="images/products.png" alt="Celulares">
+        </div>
+      </div>
+
+
+      <div class="info__contenido">
+       
+        <p class="parrafo">Nulla placerat mi vitae mauris varius consequat. Aliquam libero ante, consectetur at turpis sit amet, congue Suspendisse porta bibendum scelerisque.</p>
+        <p class="parrafo">Suspendisse porta bibendum scelerisque. Nulla placerat</p>
+        <a class="boton" href="#">Learn more</a>
+      </div>
+    </section>
+
+    <!-- ===== 4. HABILIDADES: texto + barras de progreso (CSS GRID) ===== -->
+    <section class="contenedor habilidades">
+      <div class="habilidades__texto">
+        <div class="titulo titulo--mediano">
+          <h2 class="titulo__texto">We work with big and small companies</h2>
+        </div>
+        <p class="parrafo">Nulla placerat mi vitae mauris varius consequat. Aliquam libero ante, consectetur at turpis sit amet, congue Suspendisse porta bibendum scelerisque.</p>
+        <p class="parrafo">Suspendisse porta bibendum scelerisque. Nulla placerat</p>
+      </div>
+
+      <div class="habilidades__barras">
+        <div class="barra">
+          <div class="barra__info"><span>App Development</span><span>92%</span></div>
+          <div class="barra__fondo"><div class="barra__relleno barra__relleno--naranja" style="width: 92%"></div></div>
+        </div>
+        <div class="barra">
+          <div class="barra__info"><span>User Interface</span><span>88%</span></div>
+          <div class="barra__fondo"><div class="barra__relleno barra__relleno--rosa" style="width: 88%"></div></div>
+        </div>
+        <div class="barra">
+          <div class="barra__info"><span>User Experiences</span><span>95%</span></div>
+          <div class="barra__fondo"><div class="barra__relleno barra__relleno--verde" style="width: 95%"></div></div>
+        </div>
+        <div class="barra">
+          <div class="barra__info"><span>Information Architecture</span><span>50%</span></div>
+          <div class="barra__fondo"><div class="barra__relleno barra__relleno--azul" style="width: 50%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. BANNER: imagen de fondo con título ===== -->
+    <section class="banner">
+      <div class="contenedor">
+        <h2 class="banner__titulo">Unique <br>experiences</h2>
+        <p class="banner__subtitulo">The next level</p>
+      </div>
+    </section>
+
+    <!-- ===== 6. BE UNIQUE: texto + imagen (FLEXBOX invertido) ===== -->
+    <section class="contenedor info info--invertido">
+      <img class="info__imagen" src="images/unique.png" alt="Mujer con luz de neón">
+      <div class="info__contenido">
+        <div class="titulo">
+          <h2 class="titulo__texto">Be unique</h2>
+          <p class="titulo__sub">People really matter</p>
+        </div>
+        <p class="parrafo">Nulla placerat mi vitae mauris varius consequat. Aliquam libero ante, consectetur at turpis sit amet, congue Suspendisse porta bibendum scelerisque.</p>
+        <p class="parrafo">Suspendisse porta bibendum scelerisque. Nulla placerat</p>
+        <a class="boton" href="#">Learn more</a>
+      </div>
+    </section>
+
+    <!-- ===== 7. PRODUCTS: imagen + texto (FLEXBOX) ===== -->
+    <section class="contenedor info">
+      <div class="titulo titulo--centrado">
+
+          <h2 class="titulo__texto">Products</h2>
+          <p class="titulo__sub">Latest features</p>
+        </div>
+      <img class="info__imagen" src="images/products.png" alt="Celulares">
+      <div class="info__contenido">
+        
+        <p class="parrafo">Nulla placerat mi vitae mauris varius consequat. Aliquam libero ante, consectetur at turpis sit amet, congue Suspendisse porta bibendum scelerisque.</p>
+        <p class="parrafo">Suspendisse porta bibendum scelerisque. Nulla placerat</p>
+        <a class="boton" href="#">Learn more</a>
+      </div>
+    </section>
+
+    <!-- ===== 8. CLIENTES: fila de logos (FLEXBOX con wrap) ===== -->
+    <section class="contenedor clientes">
+      <img class="clientes__logo" src="images/cliente-1.png" alt="Adobe">
+      <img class="clientes__logo" src="images/cliente-2.png" alt="Cliente 2">
+      <img class="clientes__logo" src="images/cliente-3.png" alt="Cliente 3">
+      <img class="clientes__logo" src="images/cliente-4.png" alt="Envato">
+    </section>
+
+    <!-- ===== 9. SERVICIOS: 3 tarjetas (CSS GRID) ===== -->
+    <section class="servicios">
+      <div class="contenedor servicios__grid">
+        <article class="servicio servicio--azul">
+          <img class="servicio__icono" src="images/icono-5.png" alt="">
+          <h3 class="servicio__titulo">Easy import</h3>
+          <p class="servicio__texto">Nulla placerat mi vitae mauris varius. Aliquam libero ante, consectetur at.</p>
+        </article>
+        <article class="servicio servicio--verde">
+          <img class="servicio__icono" src="images/icono-6.png" alt="">
+          <h3 class="servicio__titulo">Stunning Layouts</h3>
+          <p class="servicio__texto">Nulla placerat mi vitae mauris varius. Aliquam libero ante, consectetur at.</p>
+        </article>
+        <article class="servicio servicio--rosa">
+          <img class="servicio__icono" src="images/icono-7.png" alt="">
+          <h3 class="servicio__titulo">No Coding</h3>
+          <p class="servicio__texto">Nulla placerat mi vitae mauris varius. Aliquam libero ante, consectetur at.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 10. SOPORTE: formulario (CSS GRID) ===== -->
+    <section class="soporte">
+      <div class="contenedor">
+        <div class="titulo titulo--claro">
+          <h2 class="titulo__texto">Support</h2>
+          <p class="titulo__sub">Get in touch</p>
+        </div>
+        <form class="formulario">
+          <input class="formulario__campo" type="text" placeholder="Name">
+          <input class="formulario__campo" type="email" placeholder="Email">
+          <input class="formulario__campo" type="tel" placeholder="Phone">
+          <input class="formulario__campo formulario__campo--ancho" type="text" placeholder="Message">
+          <button class="boton formulario__boton" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== 11. FOOTER: datos de contacto + menú (FLEXBOX) ===== -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__contactos">
+        <div class="footer__contacto">
+          <img class="footer__icono" src="images/icono-telefono.png" alt="Teléfono">
+          <p>1-677-124-44225<br>1-677-124-44225<br>1-677-124-44225</p>
+        </div>
+        <div class="footer__contacto">
+          <img class="footer__icono" src="images/icono-email.png" alt="Correo">
+          <p>office@bridge.com<br>service@bridge.com<br>shop@bridge.com</p>
+        </div>
+        <div class="footer__contacto">
+          <img class="footer__icono" src="images/icono-ubicacion.png" alt="Ubicación">
+          <p>New York<br>Bridgestone side 130<br>NY</p>
+        </div>
+      </div>
+
+      <ul class="menu footer__menu">
+        <li><a class="menu__link menu__link--activo" href="#">Home</a></li>
+        <li><a class="menu__link" href="#">About Us</a></li>
+        <li><a class="menu__link" href="#">Service</a></li>
+        <li><a class="menu__link" href="#">Products</a></li>
+        <li><a class="menu__link" href="#">People</a></li>
+        <li><a class="menu__link" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

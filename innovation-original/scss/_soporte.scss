@@ -1,0 +1,49 @@
+@use 'variables' as *;
+
+// Sección negra con formulario
+.soporte {
+  background: $negro;
+  padding: 6rem 0 4rem;
+}
+
+// Formulario (CSS GRID)
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;               // celular: 1 columna
+  gap: 2.5rem;
+  margin-top: 3rem;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(3, 1fr);  // tablet/compu: 3 columnas
+    column-gap: 2rem;
+  }
+
+  @media (min-width: $desktop) {
+    column-gap: 5.5rem;
+  }
+
+  &__campo {
+    width: 100%;               // que llene su columna, sin desbordarse
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid $blanco;
+    color: $blanco;
+    font-family: $fuente-titulos;
+    font-size: 1rem;
+    padding: 0 0.6rem 0.5rem;
+
+    &::placeholder {
+      color: $blanco;
+    }
+
+    // Modificador: ocupa todo el ancho
+    &--ancho {
+      grid-column: 1 / -1;     // desde la primera hasta la última columna
+    }
+  }
+
+  &__boton {
+    grid-column: 1 / -1;
+    justify-self: start;       // no se estira, queda a la izquierda
+  }
+}

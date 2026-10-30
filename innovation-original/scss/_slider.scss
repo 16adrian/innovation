@@ -1,0 +1,13 @@
+@use 'mixins' as *;
+
+// Slideshow hecho con el MIXIN
+.slider {
+  @include slideshow(6s);                // una vuelta cada 6 segundos
+}
+
+// Los pasos del movimiento
+@keyframes deslizar {
+  0%, 45%   { transform: translateX(0); }      // foto 1
+  50%, 95%  { transform: translateX(-50%); }   // foto 2
+  100%      { transform: translateX(0); }      // vuelve a la 1
+}

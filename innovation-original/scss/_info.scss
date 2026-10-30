@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+// Bloque imagen + texto (About us, Be unique, Products) - FLEXBOX
+.info {
+  display: flex;
+  flex-direction: column;     // celular: imagen arriba, texto abajo
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &__imagen {
+    border-radius: 10px;
+  }
+
+  &__contenido {
+    max-width: 25rem;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;          // imagen y texto en fila
+    justify-content: center;
+    gap: 5rem;
+
+    &__imagen {
+      flex: 1;
+      min-width: 0;
+      max-width: 36rem;
+    }
+
+    &__contenido {
+      flex: 1;
+    }
+  }
+
+  // Modificador: la imagen va a la DERECHA
+  &--invertido {
+    @media (min-width: $tablet) {
+      flex-direction: row-reverse;
+    }
+  }
+}

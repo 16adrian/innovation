@@ -1,0 +1,24 @@
+// ===== COLORES (sacados del Figma) =====
+$azul: #076cf0;
+$negro: #000000;
+$blanco: #ffffff;
+$gris: #868686;
+$gris-claro: #f1f4f8;
+$naranja: #f2662f;
+$rosa: #fa2b7e;
+$verde: #23ddac;
+
+// Colores de las sombras de las tarjetas
+$sombra-azul: #4091fb;
+$sombra-verde: #7fe7c6;
+$sombra-rosa: #df8cc4;
+$sombra-naranja: #f4a382;
+
+// ===== FUENTES =====
+$fuente-titulos: 'Rubik', sans-serif;    // títulos grandes
+$fuente-etiquetas: 'Abel', sans-serif;   // menú, subtítulos, botones
+$fuente-texto: 'Open Sans', sans-serif;  // párrafos
+
+// ===== PUNTOS DE QUIEBRE (media queries) =====
+$tablet: 768px;
+$desktop: 1024px;

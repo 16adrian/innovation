@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+.header {
+  background: $negro url('../images/hero.jpg') center / cover no-repeat;
+  padding-bottom: 8rem;          // espacio para que las tarjetas se monten encima
+
+  // Barra de arriba: logo + menú (FLEXBOX)
+  &__barra {
+    display: flex;
+    flex-direction: column;      // celular: logo arriba, menú abajo
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  &__logo {
+    width: 70px;
+    border-radius: 20px;
+  }
+
+  &__portada {
+    padding-top: 4rem;
+  }
+
+  &__titulo {
+    font-family: $fuente-titulos;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: $blanco;
+    text-transform: uppercase;
+  }
+
+  &__subtitulo {
+    font-family: $fuente-etiquetas;
+    font-size: 1.25rem;
+    color: $gris;
+    text-transform: uppercase;
+    margin-top: 0.75rem;
+  }
+
+  // ===== TABLET Y COMPUTADORA =====
+  @media (min-width: $tablet) {
+    &__barra {
+      flex-direction: row;               // logo y menú en fila
+      justify-content: space-between;    // uno a cada lado
+    }
+
+    &__portada {
+      padding-top: 10rem;
+    }
+
+    &__titulo {
+      font-size: 5rem;
+    }
+
+    &__subtitulo {
+      font-size: 1.875rem;
+    }
+  }
+}

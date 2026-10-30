@@ -1,0 +1,47 @@
+@use 'variables' as *;
+
+// Texto + barras de progreso (CSS GRID)
+.habilidades {
+  display: grid;
+  grid-template-columns: 1fr;          // celular: 1 columna
+  gap: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 1fr 1.3fr;  // computadora: 2 columnas
+    gap: 6rem;
+  }
+
+  &__barras {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+}
+
+.barra {
+  &__info {
+    display: flex;
+    justify-content: space-between;    // nombre a la izquierda, % a la derecha
+    font-family: $fuente-etiquetas;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  &__fondo {
+    height: 5px;
+    background: $gris-claro;
+  }
+
+  &__relleno {
+    height: 100%;
+
+    &--naranja { background: $naranja; }
+    &--rosa    { background: $rosa; }
+    &--verde   { background: $verde; }
+    &--azul    { background: $azul; }
+  }
+}

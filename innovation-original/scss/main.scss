@@ -1,0 +1,22 @@
+// ===== ARCHIVO PRINCIPAL =====
+// No tiene estilos: solo junta todos los componentes (parciales).
+
+// Base
+@use 'base';
+
+// Componentes reutilizables
+@use 'boton';
+@use 'titulo';
+@use 'menu';
+
+// Secciones de la página (de arriba hacia abajo)
+@use 'header';
+@use 'ventajas';
+@use 'info';
+@use 'habilidades';
+@use 'banner';
+@use 'clientes';
+@use 'servicios';
+@use 'soporte';
+@use 'footer';
+@use 'slider';

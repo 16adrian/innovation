@@ -1,0 +1,33 @@
+@use 'variables' as *;
+
+// Quitar márgenes del navegador y que el padding no agrande las cajas
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $fuente-texto;
+  color: $negro;
+}
+
+img {
+  max-width: 100%;   // ninguna imagen se sale de su caja (responsive)
+  display: block;
+}
+
+// Caja que centra el contenido y le pone un ancho máximo
+.contenedor {
+  max-width: 1170px;
+  margin: 0 auto;     // auto a los lados = centrado
+  padding: 0 1.25rem;
+}
+
+// Párrafo gris (se usa en varias secciones)
+.parrafo {
+  color: $gris;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}

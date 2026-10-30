@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+// Fila de logos (FLEXBOX con wrap)
+.clientes {
+  display: flex;
+  flex-wrap: wrap;                 // si no caben, bajan
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+  &__logo {
+    height: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    justify-content: space-between;  // repartidos de lado a lado
+
+    &__logo {
+      height: 50px;
+    }
+  }
+}

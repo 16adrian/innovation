@@ -1,0 +1,6 @@
+# Archivos que no se suben a GitHub
+*.css.map
+.vscode/
+Thumbs.db
+.DS_Store
+*.fig

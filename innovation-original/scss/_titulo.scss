@@ -1,0 +1,46 @@
+@use 'variables' as *;
+
+// Título de sección con la rayita azul a la izquierda
+.titulo {
+  border-left: 5px solid $azul;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+
+  &__texto {
+    font-family: $fuente-titulos;
+    font-weight: 500;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  &__sub {
+    font-family: $fuente-etiquetas;
+    color: $azul;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  // Modificador: título más pequeño
+  &--mediano &__texto {
+    font-size: 1.75rem;
+    text-transform: none;
+  }
+
+  // Modificador: título blanco (para fondos negros)
+  &--claro &__texto {
+    color: $blanco;
+  }
+
+  @media (min-width: $desktop) {
+    &__texto {
+      font-size: 3.75rem;
+    }
+
+    &--mediano &__texto {
+      font-size: 2.5rem;
+    }
+  }
+}
